@@ -6,10 +6,10 @@ $this->set_js_lib($this->default_javascript_path . '/jquery_plugins/jquery.noty.
 $this->set_js_lib($this->default_javascript_path . '/jquery_plugins/config/jquery.noty.config.js');
 ?>
 
-<div class="row" data-unique-hash="<?php echo $unique_hash; ?>">
-    <div class="col-lg-12">
+<section class="content" data-unique-hash="<?php echo $unique_hash; ?>">
+
         <!-- Horizontal Form -->
-        <div class="card card-info card-outline">
+        <div class="card">
             <div class="card-header">
                 <h3 class="card-title"><?php echo $subject ?></h3>
             </div>
@@ -57,8 +57,8 @@ $this->set_js_lib($this->default_javascript_path . '/jquery_plugins/config/jquer
             <!-- /.box-footer -->
             <?php echo form_close(); ?>
         </div>
-    </div>
-</div>
+   
+</section>
 
 <script>
     var validation_url = '<?php echo $validation_url ?>';

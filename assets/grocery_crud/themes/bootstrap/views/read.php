@@ -9,12 +9,10 @@
 ?>
 
 
-
-<div class="row" data-unique-hash="<?php echo $unique_hash; ?>">
-    <div class="col-lg-12">
+<section data-unique-hash="<?php echo $unique_hash; ?>">
         <!-- Horizontal Form -->
-        <div class="card card-info card-outline">
-            <div class="card-header with-border">
+        <div class="card">
+            <div class="card-header">
                 <h5 class="card-title"><?php echo $subject ?></h5>
             </div>
             <!-- /.box-header -->
@@ -53,8 +51,7 @@
             <!-- /.box-footer -->
             <?php echo form_close(); ?>
         </div>
-    </div>
-</div>
+</section>
 
 <script>
 	var validation_url = '<?php echo $validation_url?>';

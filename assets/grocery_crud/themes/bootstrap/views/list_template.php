@@ -39,9 +39,8 @@ $this->load_js_jqueryui();
     ?></div>
 
 <!--fsdfs-->
-<div class="row">
-    <div class="col-lg-12">
-        <div class="card card-info card-outline">
+<section class="content">
+        <div class="card">
             <div class="card-header pt-1 pb-1">
                 <div class="row align-items-center">
                     <div class="col-9">
@@ -177,5 +176,4 @@ $this->load_js_jqueryui();
                 </div>
             </div>
         </div>
-    </div>
-</div>
+</section>

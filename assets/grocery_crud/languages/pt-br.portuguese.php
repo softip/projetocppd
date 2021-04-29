@@ -57,8 +57,8 @@ $lang['form_inactive']			= 'Inativo';
 $lang['form_active']			= 'Ativo';
 
 /* Added in version 1.2.2 */
-$lang['form_save_and_go_back']		= 'Salvar e voltar para a listagem';
-$lang['form_update_and_go_back']	= 'Aplicar alterações e voltar para a listagem';
+$lang['form_save_and_go_back']		= 'Salvar e voltar';
+$lang['form_update_and_go_back']	= 'Aplicar alterações e voltar';
 
 /* Upload functionality */
 $lang['string_delete_file'] 		= "Excluindo arquivo";
