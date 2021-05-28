@@ -103,7 +103,14 @@
                 <li class="nav-item">
                     <a class="nav-link" href="<?= site_url("home/tabelas") ?>">Tabelas</a>
                 </li>
-
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Serviços</a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <a class="dropdown-item" href="#">Ação</a>
+                    <a class="dropdown-item" href="#">Outra ação</a>
+                    <a class="dropdown-item" href="#">Algo mais aqui</a>
+                    </div>
+                </li>
                 <li class="nav-item">
                     <a class="nav-link" href="<?= site_url("home/login") ?>">Login</a>
                 </li>

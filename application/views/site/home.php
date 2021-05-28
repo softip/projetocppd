@@ -1,4 +1,4 @@
-
+<div 
 <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active">
@@ -21,10 +21,34 @@
   </button>
 </div>
 
-
-
-<h1>Página Principal</h1>
 <hr>
-O Cabral foi um navio de guerra do tipo corveta encouraçada ou, simplesmente, encouraçado, operado pela Armada Imperial Brasileira entre anos de 1866 e 1882. A embarcação foi construída no estaleiro da empresa britânica J. and G. Rennie em Greenwich, Inglaterra, e era líder de sua classe, que também contava com o Colombo. Foi lançado ao mar em 1865 e incorporado à armada em 15 de setembro de 1866. O encouraçado era inteiramente construído de ferro e deslocava 858, 1 033 ou 1050 toneladas, a depender da fonte de referência. Possuía dois motores a vapor que desenvolviam até 750 hp de potência, impulsionando a embarcação a cerca de 20 km/h. Sua estrutura compreendia uma casamata dupla com oito bocas de fogo. A marinha teve grandes dificuldades com este navio, que era de difícil navegabilidade e, devido ao modelo de sua casamata, que deixava uma parte sua desprotegida, era vulnerável a projéteis mergulhantes.
 
-Após alguns meses de sua chegada ao Brasil, o Cabral foi enviado ao combate na Guerra do Paraguai. O primeiro obstáculo foi a Fortaleza de Curupaiti, que, em conjunto com diversos navios da esquadra imperial, bombardeou intensamente em 2 de fevereiro de 1867. No dia 15 de agosto, o Cabral forçou com sucesso a passagem desse forte, manobra que durou cerca de duas horas. (leia mais...)
+  <h1>Comissão Permanente de Pessoal Docente (CPPD)</h1>
+  <hr>
+  <p>A CPPD constitui-se em órgão de assessoramento ao Conselho Superior, à Reitoria e aos Diretores Gerais para a formulação e o acompanhamento da execução da política de pessoal docente do Instituto Federal de Educação, Ciência e Tecnologia do Sul de Minas Gerais.</p>
+  <p>De acordo com a Lei no 12.772, de 28 de dezembro de 2012:</p>
+  <p>À CPPD caberá prestar assessoramento ao colegiado competente ou dirigente máximo na instituição de ensino, para formulação e acompanhamento da execução da política de pessoal docente, no que diz respeito a:</p>
+  <p>I. dimensionamento da alocação de vagas docentes nas unidades acadêmicas;<br>
+    II. contratação e admissão de professores efetivos e substitutos;<br>
+    III. alteração do regime de trabalho docente;<br>
+    IV. avaliação do desempenho para fins de progressão e promoção funcional;<br>
+    V. solicitação de afastamento de docentes para aperfeiçoamento, especialização, mestrado, doutorado ou pós-doutorado;<br>
+    VI. liberação de professores para programas de cooperação com outras instituições, universitárias ou não.</p>
+  <p>Demais atribuições e forma de funcionamento da CPPD serão objeto de regulamentação pelo colegiado superior ou dirigente máximo das instituições de ensino, conforme o caso.</p>
+  <p>No caso das IFE subordinadas ao Ministério da Defesa, a instituição da CPPD é opcional e ficará a critério do dirigente máximo de cada IFE.</p>
+  <p>(Lei no 12.772, de 28 de dezembro de 2012)</p>
+  <h5>Competências da CPPD:</h5>
+  <p>I. Desenvolver estudos e análises que sirvam de subsídios para a fixação, o aperfeiçoamento e a modificação da política de pessoal docente e  de seus instrumentos;<br>
+    II. Apreciar e emitir parecer, para decisão final da autoridade competente, a respeito dos assuntos relativos à:<br>
+    a) Necessidade de admissão de novos docentes;<br>
+    b) Processo de Avaliação de Desempenho em estágio probatório dos docentes;<br>
+    c) Avaliação de desempenho para a progressão e promoção funcional dos docentes, inclusive daqueles que se encontram vinculados mediante cessão ou lotação provisória;<br>
+    d) Concessão de Retribuição por Titulação;<br>
+    e) Aceleração da Promoção por titulação/final do estágio probatório;<br>
+    f) Afastamento dos docentes para qualificação, mestrado, doutorado e pós-doutorado,<br>
+    inclusive quando se tratar de renovação e de suspensão do prazo do afastamento;<br>
+    g) Alteração de regime de trabalho docente;<br>
+    h) Exoneração;<br>
+    i) Aposentadoria;<br>
+    j) Reversão de servidor docente aposentado.</p>
+    <p>(Resolução no 060/2019, de 29 de agosto de 2019)</p>

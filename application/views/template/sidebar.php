@@ -28,7 +28,7 @@
                with font-awesome or any other icon font library -->
           <li class="nav-item has-treeview">
             <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-tachometer-alt"></i>
+              <i class="nav-icon fas fa-plus-circle"></i>
               <p>
                 Cadastros
                 <i class="right fas fa-angle-left"></i>
@@ -55,7 +55,7 @@
                <!-- menu Avaliação -->
                <li class="nav-item">
                 <a href="<?= site_url("restrito/avaliacao") ?>" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
+                  <i class="far fa-edit"></i>
                   <p>Avaliação</p>
                 </a>
               </li>
@@ -63,7 +63,7 @@
                <!-- menu Titulacoa -->
                <li class="nav-item">
                 <a href="<?= site_url("restrito/titulacao") ?>" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
+                  <i class="fa fa-graduation-cap"></i>
                   <p>Titulação</p>
                 </a>
               </li>
@@ -75,8 +75,27 @@
                   <p>Carreira</p>
                 </a>
               </li>
-              
-              
+              <!-- menu Chefe Imediato -->
+              <li class="nav-item">
+                <a href="<?= site_url("restrito/chefe") ?>" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Chefe Imediato</p>
+                </a>
+              </li>
+              <!-- menu Nível -->
+              <li class="nav-item">
+                <a href="<?= site_url("restrito/nivel") ?>" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Nível</p>
+                </a>
+              </li>
+              <!-- menu Classe -->
+              <li class="nav-item">
+                <a href="<?= site_url("restrito/classe") ?>" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Classe</p>
+                </a>
+              </li>
             </ul>
           </li>
           <li class="nav-item">

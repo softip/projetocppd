@@ -39,26 +39,7 @@
       <li class="nav-item d-none d-sm-inline-block">
         <a href="<?= site_url("servidor") ?>" class="nav-link">Servidor</a>
       </li>
-      <li class="nav-item d-none d-sm-inline-block">
-        <a href="<?= site_url("situacao") ?>" class="nav-link">Situação</a>
-      </li>
-      <li class="nav-item d-none d-sm-inline-block">
-        <a href="<?= site_url("avaliacao") ?>" class="nav-link">Avaliação</a>
-      </li>
-      <li class="nav-item d-none d-sm-inline-block">
-        <a href="<?= site_url("titulacao") ?>" class="nav-link">Titulação</a>
-      </li>
-      <li class="nav-item d-none d-sm-inline-block">
-        <a href="<?= site_url("carreira") ?>" class="nav-link">Carreira</a>
-      </li>
-      <li class="nav-item d-none d-sm-inline-block">
-        <a href="<?= site_url("chefe") ?>" class="nav-link">Chefe Imediato</a>
-      </li>
-      <li class="nav-item d-none d-sm-inline-block">
-        <a href="<?= site_url("nivel") ?>" class="nav-link">Nível</a>
-      </li>
-      <li class="nav-item d-none d-sm-inline-block">
-        <a href="<?= site_url("classe") ?>" class="nav-link">Classe</a>
+    
       </li>
     </ul>
 
