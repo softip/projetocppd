@@ -47,7 +47,7 @@
                <!-- menu Situação -->
                <li class="nav-item">
                 <a href="<?= site_url("restrito/situacao") ?>" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
+                  <i class="fas fa-chalkboard-teacher nav-icon"></i>
                   <p>Situação</p>
                 </a>
               </li>
@@ -55,15 +55,15 @@
                <!-- menu Avaliação -->
                <li class="nav-item">
                 <a href="<?= site_url("restrito/avaliacao") ?>" class="nav-link">
-                  <i class="far fa-edit"></i>
+                  <i class="far fa-edit nav-icon"></i>
                   <p>Avaliação</p>
                 </a>
               </li>
 
-               <!-- menu Titulacoa -->
+               <!-- menu Titulacao -->
                <li class="nav-item">
                 <a href="<?= site_url("restrito/titulacao") ?>" class="nav-link">
-                  <i class="fa fa-graduation-cap"></i>
+                  <i class="fa fa-graduation-cap nav-icon"></i>
                   <p>Titulação</p>
                 </a>
               </li>
@@ -71,28 +71,28 @@
                <!-- menu Carreira -->
                <li class="nav-item">
                 <a href="<?= site_url("restrito/carreira") ?>" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
+                  <i class="far fa-address-card nav-icon"></i>
                   <p>Carreira</p>
                 </a>
               </li>
               <!-- menu Chefe Imediato -->
               <li class="nav-item">
                 <a href="<?= site_url("restrito/chefe") ?>" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
+                  <i class="fas fa-briefcase nav-icon"></i>
                   <p>Chefe Imediato</p>
                 </a>
               </li>
               <!-- menu Nível -->
               <li class="nav-item">
                 <a href="<?= site_url("restrito/nivel") ?>" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
+                  <i class="fas fa-layer-group nav-icon"></i>
                   <p>Nível</p>
                 </a>
               </li>
               <!-- menu Classe -->
               <li class="nav-item">
                 <a href="<?= site_url("restrito/classe") ?>" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
+                  <i class="fas fa-circle-notch nav-icon"></i>
                   <p>Classe</p>
                 </a>
               </li>

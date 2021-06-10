@@ -1,15 +1,17 @@
+
+<br>
 <div class="row justify-content-center">
   <div class="col-lg-6 ">
     <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <img src="https://www.coledecore.com.br/wp-content/uploads/2017/11/lj2.jpg" class="d-block w-100" alt="...">
+        <img src="<?= base_url() ?>recursos/img/CPPD.png" class="d-block w-100" alt="...">
       </div>
       <div class="carousel-item">
-        <img src="https://i.pinimg.com/originals/0c/71/ca/0c71ca247666b34118661f18aad0f2ab.jpg" class="d-block w-100" alt="...">
+        <img src="<?= base_url() ?>recursos/img/campus.jpeg" class="d-block w-100" alt="...">
       </div>
       <div class="carousel-item">
-        <img src="https://i.pinimg.com/originals/28/3e/83/283e83a885b2d31c9641228e6a1a9b91.jpg" class="d-block w-100" alt="...">
+        <img src="<?= base_url() ?>recursos/img/campus2.jpeg" class="d-block w-100" alt="..." alt="...">
       </div>
     </div>
     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
