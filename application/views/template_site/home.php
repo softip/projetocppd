@@ -50,11 +50,12 @@
                                 </form>
                             </div>
                         </div>
+                        <br>
                         <div class="row">
                             <div class="col-lg-12">
-                                <ul class="list-inline float-right">
+                                <ul class="list-inline pull-right">
                                     <li class="list-inline-item">
-                                        <a href="https://www.facebook.com/CampusInconfidentesAscom/" title="Facebook" target="_blank" rel="noopener noreferrer" class="sem-decoration">
+                                        <a href="https://www.facebook.com/institutofederalcampusinconfidentes/" title="Facebook" target="_blank" rel="noopener noreferrer" class="sem-decoration">
                                             <i class="fa fa-facebook-square fa-2x"></i>
                                         </a>
                                     </li>
@@ -108,10 +109,10 @@
                         Serviços
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="#">Progressão e Aceleração</a></li>
-                        <li><a class="dropdown-item" href="#">Afastamento para capacitação</a></li>
-                        <li><a class="dropdown-item" href="#">RSC</a></li>
-                        <li><a class="dropdown-item" href="#">Normativa Docente</a></li>
+                        <li><a class="dropdown-item" href="<?= site_url("home/progressao") ?>">Progressão e Aceleração</a></li>
+                        <li><a class="dropdown-item" href="<?= site_url("home/afastamento") ?>">Afastamento para capacitação</a></li>
+                        <li><a class="dropdown-item" href="<?= site_url("home/rsc") ?>">RSC</a></li>
+                        <li><a class="dropdown-item" href="<?= site_url("home/normativa") ?>">Normativa Docente</a></li>
 
                     </ul>
                     </li>
@@ -136,8 +137,8 @@
             <div class="container ">           
                 <a href="http://portal.ifs.ifsuldeminas.edu.br">IFSULDEMINAS - Campus Inconfidentes</a> <br />
                 Praça Tiradentes, 416 - Centro - Inconfidentes - MG - CEP 37576-000 - Fone: (35) 3464-1200 <br />
-                © 2018. Todos os direitos reservados<br />
-                CATÁLOGO DE PESQUISADORES - IFSULDEMINAS<br />
+                © 2021. Todos os direitos reservados<br />
+                SISTEMA DE GERENCIAMENTO PARA CPPD - IFSULDEMINAS<br />
             </div>                
         </footer>
 

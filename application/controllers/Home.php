@@ -21,8 +21,20 @@ class Home extends CI_Controller {
     public function documentos()	{
 		$this->template->load("template_site/home",'site/documentos');
 	}
-
-    public function login()	{
+	public function login()	{
 		$this->template->load("template_site/home",'site/restrito');
 	}
+    public function progressao()	{
+		$this->template->load("template_site/home",'/site/servicos/progressao');
+	}
+	public function afastamento()	{
+		$this->template->load("template_site/home",'/site/servicos/afastamento');
+	}
+	public function normativa()	{
+		$this->template->load("template_site/home",'/site/servicos/normativa');
+	}
+	public function rsc()	{
+		$this->template->load("template_site/home",'/site/servicos/rsc');
+	}
+	
 }

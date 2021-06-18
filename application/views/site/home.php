@@ -35,27 +35,33 @@
   <p>A CPPD constitui-se em órgão de assessoramento ao Conselho Superior, à Reitoria e aos Diretores Gerais para a formulação e o acompanhamento da execução da política de pessoal docente do Instituto Federal de Educação, Ciência e Tecnologia do Sul de Minas Gerais.</p>
   <p>De acordo com a Lei no 12.772, de 28 de dezembro de 2012:</p>
   <p>À CPPD caberá prestar assessoramento ao colegiado competente ou dirigente máximo na instituição de ensino, para formulação e acompanhamento da execução da política de pessoal docente, no que diz respeito a:</p>
-  <p>I. dimensionamento da alocação de vagas docentes nas unidades acadêmicas;<br>
-    II. contratação e admissão de professores efetivos e substitutos;<br>
-    III. alteração do regime de trabalho docente;<br>
-    IV. avaliação do desempenho para fins de progressão e promoção funcional;<br>
-    V. solicitação de afastamento de docentes para aperfeiçoamento, especialização, mestrado, doutorado ou pós-doutorado;<br>
-    VI. liberação de professores para programas de cooperação com outras instituições, universitárias ou não.</p>
+    <ul>
+      <li>I. Dimensionamento da alocação de vagas docentes nas unidades acadêmicas;</li>
+	    <li>II. Contratação e admissão de professores efetivos e substitutos;</li>
+	    <li>III. Alteração do regime de trabalho docente;</li>
+	    <li>IV. Avaliação do desempenho para fins de progressão e promoção funcional;</li>
+      <li>V. Solicitação de afastamento de docentes para aperfeiçoamento, especialização, mestrado, doutorado ou pós-doutorado;</li>
+      <li>VI. Liberação de professores para programas de cooperação com outras instituições, universitárias ou não.</li>
+    </ul>
   <p>Demais atribuições e forma de funcionamento da CPPD serão objeto de regulamentação pelo colegiado superior ou dirigente máximo das instituições de ensino, conforme o caso.</p>
   <p>No caso das IFE subordinadas ao Ministério da Defesa, a instituição da CPPD é opcional e ficará a critério do dirigente máximo de cada IFE.</p>
   <p>(Lei no 12.772, de 28 de dezembro de 2012)</p>
   <h5>Competências da CPPD:</h5>
-  <p>I. Desenvolver estudos e análises que sirvam de subsídios para a fixação, o aperfeiçoamento e a modificação da política de pessoal docente e  de seus instrumentos;<br>
-    II. Apreciar e emitir parecer, para decisão final da autoridade competente, a respeito dos assuntos relativos à:<br>
-    a) Necessidade de admissão de novos docentes;<br>
-    b) Processo de Avaliação de Desempenho em estágio probatório dos docentes;<br>
-    c) Avaliação de desempenho para a progressão e promoção funcional dos docentes, inclusive daqueles que se encontram vinculados mediante cessão ou lotação provisória;<br>
-    d) Concessão de Retribuição por Titulação;<br>
-    e) Aceleração da Promoção por titulação/final do estágio probatório;<br>
-    f) Afastamento dos docentes para qualificação, mestrado, doutorado e pós-doutorado,<br>
-    inclusive quando se tratar de renovação e de suspensão do prazo do afastamento;<br>
-    g) Alteração de regime de trabalho docente;<br>
-    h) Exoneração;<br>
-    i) Aposentadoria;<br>
-    j) Reversão de servidor docente aposentado.</p>
+  <ul>
+      <li>I. Desenvolver estudos e análises que sirvam de subsídios para a fixação, o aperfeiçoamento e a modificação da política de pessoal docente e  de seus instrumentos;</li>
+	    <li>II. Apreciar e emitir parecer, para decisão final da autoridade competente, a respeito dos assuntos relativos à:
+      <p><ul>
+          <li>Necessidade de admissão de novos docentes;</li>
+          <li>Processo de Avaliação de Desempenho em estágio probatório dos docentes;</li>
+          <li>Avaliação de desempenho para a progressão e promoção funcional dos docentes, inclusive daqueles que se encontram vinculados mediante cessão ou lotação provisória;</li>
+          <li>Concessão de Retribuição por Titulação;</li>
+          <li>Aceleração da Promoção por titulação/final do estágio probatório;</li>
+          <li>Afastamento dos docentes para qualificação, mestrado, doutorado e pós-doutorado, inclusive quando se tratar de renovação e de suspensão do prazo do afastamento;</li>
+          <li>Alteração de regime de trabalho docente;</li>
+          <li>Exoneração;</li>
+          <li>Aposentadoria;</li>
+          <li>Reversão de servidor docente aposentado.</li>
+        </ul></p></li>
+    </ul>
     <p>(Resolução no 060/2019, de 29 de agosto de 2019)</p>
+<br>
