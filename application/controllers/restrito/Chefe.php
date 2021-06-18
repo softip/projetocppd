@@ -5,6 +5,9 @@ class Chefe extends CI_Controller {
 
 	public function __construct(){
 		parent::__construct();
+		//adicionar essa linha para controlar acesso ao controlador
+		$this->load->library("controla_acesso");
+		
 		$this->template->set("titulo", "Cadastro de Chefes");
 		$this->template->set("breadcrumb1", "Cadastros");
 		$this->template->set("breadcrumb2", "Chefes");

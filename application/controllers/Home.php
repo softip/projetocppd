@@ -22,7 +22,7 @@ class Home extends CI_Controller {
 		$this->template->load("template_site/home",'site/documentos');
 	}
 	public function login()	{
-		$this->template->load("template_site/home",'site/restrito');
+		$this->template->load("template_site/home",'site/form_login');
 	}
     public function progressao()	{
 		$this->template->load("template_site/home",'/site/servicos/progressao');
