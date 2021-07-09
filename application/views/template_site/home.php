@@ -104,18 +104,18 @@
                 <li class="nav-item">
                     <a class="nav-link" href="<?= site_url("home/tabelas") ?>">Tabelas</a>
                 </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Serviços
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="<?= site_url("home/progressao") ?>">Progressão e Aceleração</a></li>
-                        <li><a class="dropdown-item" href="<?= site_url("home/afastamento") ?>">Afastamento para capacitação</a></li>
-                        <li><a class="dropdown-item" href="<?= site_url("home/rsc") ?>">RSC</a></li>
-                        <li><a class="dropdown-item" href="<?= site_url("home/normativa") ?>">Normativa Docente</a></li>
-
-                    </ul>
-                    </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="<?= site_url("home/progressao") ?>">Progressão e Aceleração</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="<?= site_url("home/afastamento") ?>">Afastamento para capacitação</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="<?= site_url("home/rsc") ?>">RSC</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="<?= site_url("home/normativa") ?>">Normativa Docente</a>
+                </li>
                 <li class="nav-item">
                     <a class="nav-link" href="<?= site_url("home/login") ?>">Login</a>
                 </li>
