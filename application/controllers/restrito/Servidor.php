@@ -17,8 +17,11 @@ class Servidor extends CI_Controller {
 		$crud = new Grocery_CRUD();
 		$crud->set_table("servidor");
 		$crud->set_subject("Servidor");
-		$crud->display_as("situacao_idsituacao", "Situação");
-		$crud->set_relation("situacao_idsituacao", "situacao", "especificacao");
+		$crud->display_as("grupo_idgrupo", "Grupo");
+		$crud->set_relation("grupo_idgrupo", "grupo", "descricao");
+		$crud->columns("nome", "siape");
+		$crud->set_relation_n_n("chefe", "chefe", "servidor", "servidor_idservidor", "servidor_chefe", "nome");
+		$crud->unset_clone();
 		$form = $crud->render();
 		$this->template->load("template/restrito",'crud/index', $form);
 	}

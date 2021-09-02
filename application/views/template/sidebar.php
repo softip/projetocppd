@@ -49,9 +49,9 @@
 
                <!-- menu Situação -->
                <li class="nav-item">
-                <a href="<?= site_url("restrito/situacao") ?>" class="nav-link">
+                <a href="<?= site_url("restrito/grupo") ?>" class="nav-link">
                   <i class="fas fa-chalkboard-teacher nav-icon"></i>
-                  <p>Situação</p>
+                  <p>Grupo</p>
                 </a>
               </li>
 
@@ -101,6 +101,35 @@
               </li>
             </ul>
           </li>
+
+          <li class="nav-item has-treeview">
+              <a href="#" class="nav-link">
+                <i class="nav-icon fas fa-plus-circle"></i>
+                <p>
+                  Formulários
+                  <i class="right fas fa-angle-left"></i>
+                </p>
+              </a>
+              <ul class="nav nav-treeview">
+              
+                <!-- menu Ficha -->
+                <li class="nav-item">
+                  <a href="<?= site_url("restrito/ficha") ?>" class="nav-link">         
+                    <i class="fas fa-user-cog nav-icon"></i>
+                    <p>Fichas</p>
+                  </a>
+                </li>
+
+                <!-- menu Critério -->
+                <li class="nav-item">
+                  <a href="<?= site_url("restrito/criterio") ?>" class="nav-link">         
+                    <i class="fas fa-user-cog nav-icon"></i>
+                    <p>Critério</p>
+                  </a>
+                </li>
+              </ul>
+          </li>
+
           <li class="nav-item">
             <a href="<?= site_url("login/sair") ?>" class="nav-link">
             <i class="nav-icon fas fa-door-closed"></i>
