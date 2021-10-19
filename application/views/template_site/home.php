@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en">
   <head>
+
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -25,6 +26,7 @@
         <header class="governo">
             <div class="container">
                 <div class="row">
+                        
                     <div id="logo" class="col-lg-9 small">
                         <a href="<?= site_url()?>" title="Campus Inconfidentes">
                             <span class="portal-title-1"> INSTITUTO FEDERAL DO SUL DE MINAS GERAIS</span>
