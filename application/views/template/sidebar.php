@@ -12,15 +12,15 @@
     <!-- Sidebar -->
     <div class="sidebar">
       <!-- Sidebar user (optional) -->
-      <?php
-          $usuario = $this->session->userdata("usuario");
-      ?>
+      <?php $user = $this->session->userdata("user");?>
+      <?php $fotoUser = ($user['foto'] == null) ? "sem_foto.jpg" : $user['foto'] ?>
+      
       <div class="user-panel mt-3 pb-3 mb-3 d-flex">
         <div class="image">
-          <img src="<?= base_url("recursos")?>/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
+          <img src="<?php echo base_url($fotoUser); ?>" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-          <a href="#" class="d-block"><?= isset($usuario["nome"])? $usuario["nome"] : "" ?></a>
+          <a href="#" class="d-block"><?= isset($user["nome"])? $user["nome"] : "" ?></a>
         </div>
       </div>
 
@@ -29,122 +29,25 @@
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
-          <li class="nav-item has-treeview">
-            <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-plus-circle"></i>
-              <p>
-                Cadastros
-                <i class="right fas fa-angle-left"></i>
-              </p>
+          <li class="nav-header">MENU</li>
+          <?php echo $this->menus->create_menu(); ?>
+          
+          <li class="nav-header">GERAL</li>
+          
+         <li class="nav-item pt-1">
+            <a href="<?= site_url('')?>" class="nav-link">
+            <i class="nav-icon fa fa-globe"></i>
+              <p>Acesso Público</p>
             </a>
-            <ul class="nav nav-treeview">
-             
-              <!-- menu servidor -->
-              <li class="nav-item">
-                <a href="<?= site_url("restrito/servidor") ?>" class="nav-link">         
-                  <i class="fas fa-user-cog nav-icon"></i>
-                  <p>Servidor</p>
-                </a>
-              </li>
-
-               <!-- menu Situação -->
-               <li class="nav-item">
-                <a href="<?= site_url("restrito/grupo") ?>" class="nav-link">
-                  <i class="fas fa-chalkboard-teacher nav-icon"></i>
-                  <p>Grupo</p>
-                </a>
-              </li>
-
-               <!-- menu Avaliação -->
-               <li class="nav-item">
-                <a href="<?= site_url("restrito/avaliacao") ?>" class="nav-link">
-                  <i class="far fa-edit nav-icon"></i>
-                  <p>Avaliação</p>
-                </a>
-              </li>
-
-               <!-- menu Titulacao -->
-               <li class="nav-item">
-                <a href="<?= site_url("restrito/titulacao") ?>" class="nav-link">
-                  <i class="fa fa-graduation-cap nav-icon"></i>
-                  <p>Titulação</p>
-                </a>
-              </li>
-
-               <!-- menu Carreira -->
-               <li class="nav-item">
-                <a href="<?= site_url("restrito/carreira") ?>" class="nav-link">
-                  <i class="far fa-address-card nav-icon"></i>
-                  <p>Carreira</p>
-                </a>
-              </li>
-              <!-- menu Chefe Imediato -->
-              <li class="nav-item">
-                <a href="<?= site_url("restrito/chefe") ?>" class="nav-link">
-                  <i class="fas fa-briefcase nav-icon"></i>
-                  <p>Chefe Imediato</p>
-                </a>
-              </li>
-              <!-- menu Nível -->
-              <li class="nav-item">
-                <a href="<?= site_url("restrito/nivel") ?>" class="nav-link">
-                  <i class="fas fa-layer-group nav-icon"></i>
-                  <p>Nível</p>
-                </a>
-              </li>
-              <!-- menu Classe -->
-              <li class="nav-item">
-                <a href="<?= site_url("restrito/classe") ?>" class="nav-link">
-                  <i class="fas fa-circle-notch nav-icon"></i>
-                  <p>Classe</p>
-                </a>
-              </li>
-            </ul>
           </li>
-
-          <li class="nav-item has-treeview">
-              <a href="#" class="nav-link">
-                <i class="nav-icon fas fa-plus-circle"></i>
-                <p>
-                  Formulários
-                  <i class="right fas fa-angle-left"></i>
-                </p>
-              </a>
-              <ul class="nav nav-treeview">
-              
-                <!-- menu Ficha -->
-                <li class="nav-item">
-                  <a href="<?= site_url("restrito/ficha") ?>" class="nav-link">         
-                    <i class="fas fa-user-cog nav-icon"></i>
-                    <p>Fichas</p>
-                  </a>
-                </li>
-
-                <!-- menu Critério -->
-                <li class="nav-item">
-                  <a href="<?= site_url("restrito/criterio") ?>" class="nav-link">         
-                    <i class="fas fa-user-cog nav-icon"></i>
-                    <p>Critério</p>
-                  </a>
-                </li>
-              </ul>
-          </li>
-
+          
           <li class="nav-item">
-            <a href="<?= site_url("login/sair") ?>" class="nav-link">
+            <a href="<?= site_url('restrito/login/logoff') ?>" class="nav-link">
             <i class="nav-icon fas fa-door-closed"></i>
               <p>Sair</p>
             </a>
           </li>
-          <li class="nav-item">
-            <a href="../widgets.html" class="nav-link">
-              <i class="nav-icon fas fa-th"></i>
-              <p>
-                Widgets
-                <span class="right badge badge-danger">New</span>
-              </p>
-            </a>
-          </li>
+          
          
         </ul>
       </nav>
