@@ -71,46 +71,44 @@ class Menus {
         foreach ($menus as $menu) {
             $openMenu = ($categoriaAtiva == $menu->categoria) ? "menu-open" : "";
             $openMenu2 = ($categoriaAtiva == $menu->categoria) ? "style='display: block;'" : "";
-            echo "<li class='treeview $openMenu'>";
-            echo "<a href='#'>";
-            echo "<i class='$menu->icone'></i>";
-            echo "      <span>$menu->categoria</span>";
-            echo "      <span class='pull-right-container'>";
-            echo "        <i class='fa fa-angle-left pull-right'></i>";
-            echo "      </span>";
-            echo "    </a>";
-            echo "    <ul class='treeview-menu' $openMenu2> ";
+            printf("<li class='nav-item has-treeview $openMenu'>\n");
+            printf("<a href='#' class='nav-link'>");
+            printf( "<i class='nav-icon $menu->icone'></i>\n");
+            printf( "      <p>$menu->categoria");
+            printf( "        <i class='right fas fa-angle-left'></i>\n");
+            printf( "      </p>\n");
+            printf( "    </a>\n");
+            printf( "    <ul class='nav nav-treeview' $openMenu2> \n");
+
+            $this->CI->db->where("menu_idmenu", $menu->idmenu);
+            $this->CI->db->where("mostrar_menu", 1);
+            $links = $this->CI->db->get("controller")->result();
             $this->_addItensMenu($user, $menu->idmenu);
             echo "    </ul>";
             echo "  </li>";
         }
+ 
     }
 
     private function _addItensMenu($user, $idmenu) {
         $this->CI->db->where("menu_idmenu", $idmenu);
         $this->CI->db->where("mostrar_menu", 1);
         $links = $this->CI->db->get("controller")->result();
-
         foreach ($links as $link) {
-            $linkAtivo = $this->hasActiveLink($link->name);
-            $notificacao = $this->_obterNoticacoes($link->name);
-
-            foreach ($user->papeis as $papel) {
-                if ($this->CI->zacl->check_acl($papel->papel, $link->name)) {
-                    echo "<li $linkAtivo><a href='" . site_url($link->name) . "'><i class='$link->icone'></i> <span>$link->titulo</span>$notificacao</a></li>";
-                    break;
-                }
-            }
+            $linkAtivo = $this->hasActiveLink($link->name); 
+            echo "<li nav-item $linkAtivo><a href='" . site_url($link->name) . "' class='nav-link' ><i class='$link->icone nav-icon'></i> <p>$link->titulo</p></a></li>";
         }
+        
     }
 
     function _getMenuCategoriaRoleRetrict($ids_papeis) {
-        $this->CI->db->select("menu.idmenu, menu.categoria, menu.icone");
+        $this->CI->db->select("menu.idmenu, menu.categoria, menu.icone, menu.ordem");
         $this->CI->db->distinct();
         $this->CI->db->join("privilegio", "privilegio.papel_idpapel = papel.idpapel");
         $this->CI->db->join("controller", "controller.idcontroller = privilegio.controller_idcontroller");
         $this->CI->db->join("menu", "menu.idmenu = controller.menu_idmenu");
-        $this->CI->db->where_in("papel.idpapel", $ids_papeis);       
+        $this->CI->db->where_in("papel.idpapel", $ids_papeis); 
+        $this->CI->db->order_by("menu.ordem");
         return $this->CI->db->get("papel")->result();
     }
 

@@ -5,9 +5,9 @@ https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/c
 #       Lista de Tarefas          #
 ###################################
 
-1 - Importar dados dos servidores para o Sistema 
-2 - Corrigir o login para fazer login com contas institucionais
-3 - Criar sistema de permissões e nível de acesso para os usuários
+ok => 1 - Importar dados dos servidores para o Sistema 
+ok => 2 - Corrigir o login para fazer login com contas institucionais
+ok => 3 - Criar sistema de permissões e nível de acesso para os usuários
 4 - Definir os menus (funcionalidades que cada servidor/papel possui)
 5 - Para Docente - Criar tela de requerimento 
 6 - Para RH - Criar tela para registrar processo

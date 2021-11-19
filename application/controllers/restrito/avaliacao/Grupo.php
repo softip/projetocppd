@@ -16,7 +16,7 @@ class Grupo extends CI_Controller {
         $crud->set_table("grupo");
         $crud->required_fields("nome", "descricao");
         $crud->display_as("descricao", "Descrição");
-        $crud->add_action("Pontos", null, site_url("restrito/pontos/index/"), 'fas fa-plus-circle', null);
+        $crud->add_action("Pontos", null, site_url("restrito/avaliacao/pontos/index/"), 'fas fa-plus-circle', null);
         $crud->set_relation_n_n('fichas', 'fichas_grupo', 'ficha_avaliacao', 'grupo_idgrupo', 'ficha_avaliacao_idficha_avaliacao', 'nome', 'ordem');
         $crud->unset_clone();
         $form = $crud->render();

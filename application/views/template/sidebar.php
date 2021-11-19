@@ -13,11 +13,11 @@
     <div class="sidebar">
       <!-- Sidebar user (optional) -->
       <?php $user = $this->session->userdata("user");?>
-      <?php $fotoUser = ($user['foto'] == null) ? "sem_foto.jpg" : $user['foto'] ?>
+      <?php $fotoUser = ($user['foto'] == null) ? "assets/uploads/user/user.png" : $user['foto'] ?>
       
       <div class="user-panel mt-3 pb-3 mb-3 d-flex">
         <div class="image">
-          <img src="<?php echo base_url($fotoUser); ?>" class="img-circle elevation-2" alt="User Image">
+          <img src="<?= base_url($fotoUser) ?>" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
           <a href="#" class="d-block"><?= isset($user["nome"])? $user["nome"] : "" ?></a>

@@ -19,7 +19,7 @@ class Servidor extends CI_Controller{
         $crud->set_relation("segmento_idsegmento", "segmento", "nome");        
         $crud->display_as("campi_idcampi", "Campi");        
         $crud->display_as("segmento_idsegmento", "Segmento");     
-        $crud->set_field_upload("foto", "assets/uploads/pesquisadores");
+        $crud->set_field_upload("foto", "assets/uploads/user");
         
         $state = $crud->getState();
         if ($state == "insert_validation") {

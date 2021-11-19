@@ -3,10 +3,13 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+            <file>file:/var/www/cppd/other/lista_tarefas.txt</file>
             <file>file:/var/www/cppd/application/controllers/restrito/administracao/Campi.php</file>
             <file>file:/var/www/cppd/application/views/template/sidebar.php</file>
             <file>file:/var/www/cppd/application/controllers/restrito/avaliacao/Avaliar.php</file>
-            <file>file:/var/www/cppd/application/libraries/Menus.php</file>
+            <file>file:/var/www/cppd/application/controllers/restrito/avaliacao/Pontos.php</file>
+            <file>file:/var/www/cppd/application/controllers/restrito/administracao/Servidor.php</file>
+            <file>file:/var/www/cppd/application/controllers/restrito/avaliacao/Grupo.php</file>
         </group>
     </open-files>
 </project-private>
