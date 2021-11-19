@@ -62,11 +62,11 @@ class Menus {
     }
 
     function _create_menu_restrict_papel($user) {
-        $ids = array_map(function($p) {
+        $papeis = array_map(function($p) {
             return $p->idpapel;
         }, $user->papeis);
         
-        $menus = $this->_getMenuCategoriaRoleRetrict($ids);
+        $menus = $this->_getMenuCategoriaRoleRetrict($papeis);
         $categoriaAtiva = $this->_getCategoriaAtiva();
         foreach ($menus as $menu) {
             $openMenu = ($categoriaAtiva == $menu->categoria) ? "menu-open" : "";
@@ -78,21 +78,21 @@ class Menus {
             printf( "        <i class='right fas fa-angle-left'></i>\n");
             printf( "      </p>\n");
             printf( "    </a>\n");
-            printf( "    <ul class='nav nav-treeview' $openMenu2> \n");
-
-            $this->CI->db->where("menu_idmenu", $menu->idmenu);
-            $this->CI->db->where("mostrar_menu", 1);
-            $links = $this->CI->db->get("controller")->result();
-            $this->_addItensMenu($user, $menu->idmenu);
+            printf( "    <ul class='nav nav-treeview' $openMenu2> \n");           
+            $this->_addItensMenu($papeis, $menu->idmenu);
             echo "    </ul>";
             echo "  </li>";
         }
  
     }
 
-    private function _addItensMenu($user, $idmenu) {
+    private function _addItensMenu($papeis, $idmenu) {
+        $this->CI->db->select("controller.name, controller.icone, controller.titulo");
+        $this->CI->db->join("privilegio", "privilegio.controller_idcontroller = controller.idcontroller");
+        $this->CI->db->distinct();
         $this->CI->db->where("menu_idmenu", $idmenu);
         $this->CI->db->where("mostrar_menu", 1);
+        $this->CI->db->where_in("privilegio.papel_idpapel", $papeis);
         $links = $this->CI->db->get("controller")->result();
         foreach ($links as $link) {
             $linkAtivo = $this->hasActiveLink($link->name); 

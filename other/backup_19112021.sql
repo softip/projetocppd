@@ -1,8 +1,8 @@
 -- --------------------------------------------------------
--- Servidor:                     localhost
--- Versão do servidor:           5.7.31-0ubuntu0.18.04.1 - (Ubuntu)
--- OS do Servidor:               Linux
--- HeidiSQL Versão:              10.1.0.5464
+-- Servidor:                     127.0.0.1
+-- Versão do servidor:           10.4.13-MariaDB - mariadb.org binary distribution
+-- OS do Servidor:               Win64
+-- HeidiSQL Versão:              9.5.0.5196
 -- --------------------------------------------------------
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
@@ -32,7 +32,6 @@ CREATE TABLE IF NOT EXISTS `avaliacao` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- Copiando dados para a tabela db_cppd.avaliacao: ~0 rows (aproximadamente)
-DELETE FROM `avaliacao`;
 /*!40000 ALTER TABLE `avaliacao` DISABLE KEYS */;
 /*!40000 ALTER TABLE `avaliacao` ENABLE KEYS */;
 
@@ -44,7 +43,6 @@ CREATE TABLE IF NOT EXISTS `campi` (
 ) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
 
 -- Copiando dados para a tabela db_cppd.campi: ~9 rows (aproximadamente)
-DELETE FROM `campi`;
 /*!40000 ALTER TABLE `campi` DISABLE KEYS */;
 INSERT INTO `campi` (`idcampi`, `nome`) VALUES
 	(1, 'Inconfidentes'),
@@ -71,7 +69,6 @@ CREATE TABLE IF NOT EXISTS `campi_curso` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- Copiando dados para a tabela db_cppd.campi_curso: ~54 rows (aproximadamente)
-DELETE FROM `campi_curso`;
 /*!40000 ALTER TABLE `campi_curso` DISABLE KEYS */;
 INSERT INTO `campi_curso` (`campi_idcampi`, `curso_idcurso`, `ordem`) VALUES
 	(1, 1, NULL),
@@ -147,7 +144,6 @@ CREATE TABLE IF NOT EXISTS `carreira` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- Copiando dados para a tabela db_cppd.carreira: ~0 rows (aproximadamente)
-DELETE FROM `carreira`;
 /*!40000 ALTER TABLE `carreira` DISABLE KEYS */;
 /*!40000 ALTER TABLE `carreira` ENABLE KEYS */;
 
@@ -163,7 +159,6 @@ CREATE TABLE IF NOT EXISTS `chefe` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- Copiando dados para a tabela db_cppd.chefe: ~0 rows (aproximadamente)
-DELETE FROM `chefe`;
 /*!40000 ALTER TABLE `chefe` DISABLE KEYS */;
 /*!40000 ALTER TABLE `chefe` ENABLE KEYS */;
 
@@ -175,7 +170,6 @@ CREATE TABLE IF NOT EXISTS `classe` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- Copiando dados para a tabela db_cppd.classe: ~0 rows (aproximadamente)
-DELETE FROM `classe`;
 /*!40000 ALTER TABLE `classe` DISABLE KEYS */;
 /*!40000 ALTER TABLE `classe` ENABLE KEYS */;
 
@@ -187,8 +181,7 @@ CREATE TABLE IF NOT EXISTS `configuracoes` (
   PRIMARY KEY (`idconfiguracoes`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
--- Copiando dados para a tabela db_cppd.configuracoes: ~1 rows (aproximadamente)
-DELETE FROM `configuracoes`;
+-- Copiando dados para a tabela db_cppd.configuracoes: ~0 rows (aproximadamente)
 /*!40000 ALTER TABLE `configuracoes` DISABLE KEYS */;
 INSERT INTO `configuracoes` (`idconfiguracoes`, `titulo_termo`, `texto_termo`) VALUES
 	(1, 'Termo de autorização de uso de imagem, dados e reprodução', '<div class="gmail_default" style="text-align: justify;">\n	<span style="font-size:14px;"><span style="color: rgb(51, 51, 51); font-family: &quot;Source Sans Pro&quot;, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;"><strong>AUTORIZO</strong> o uso de meus dados institucionais (telefone, e-mail, &aacute;rea de forma&ccedil;&atilde;o e atua&ccedil;&atilde;o, linhas de pesquisa, grupos de pesquisa e laborat&oacute;rios, bem como outros dados disponibilizados ainda no curr&iacute;culo lattes), bem como o uso de minha imagem em todo e qualquer material, documentos e outros meios de comunica&ccedil;&atilde;o, m&iacute;dias sociais,&nbsp; para&nbsp; campanhas promocionais e institucional do IFSULDEMINAS, sejam essas destinadas &agrave; divulga&ccedil;&atilde;o ao p&uacute;blico em geral e/ou apenas para uso interno desta institui&ccedil;&atilde;o, desde que n&atilde;o haja desvirtuamento da sua finalidade. A presente autoriza&ccedil;&atilde;o &eacute; concedida a t&iacute;tulo gratuito.&nbsp;</span></span></div>\n<div class="gmail_default" style="font-size: small;">\n	&nbsp;</div>\n');
@@ -210,7 +203,6 @@ CREATE TABLE IF NOT EXISTS `controller` (
 ) ENGINE=InnoDB AUTO_INCREMENT=42 DEFAULT CHARSET=utf8;
 
 -- Copiando dados para a tabela db_cppd.controller: ~20 rows (aproximadamente)
-DELETE FROM `controller`;
 /*!40000 ALTER TABLE `controller` DISABLE KEYS */;
 INSERT INTO `controller` (`idcontroller`, `name`, `titulo`, `descricao`, `icone`, `gerenciar`, `mostrar_menu`, `menu_idmenu`) VALUES
 	(14, 'restrito/administracao/servidor', 'Servidor', 'Gerenciar servidores públicos', 'fa fa-id-card', 1, 1, 3),
@@ -238,12 +230,11 @@ INSERT INTO `controller` (`idcontroller`, `name`, `titulo`, `descricao`, `icone`
 -- Copiando estrutura para tabela db_cppd.criterios_avaliativos
 CREATE TABLE IF NOT EXISTS `criterios_avaliativos` (
   `idcriterios_avaliativos` int(11) NOT NULL AUTO_INCREMENT,
-  `criterio` text,
+  `criterio` text DEFAULT NULL,
   PRIMARY KEY (`idcriterios_avaliativos`)
 ) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8;
 
 -- Copiando dados para a tabela db_cppd.criterios_avaliativos: ~20 rows (aproximadamente)
-DELETE FROM `criterios_avaliativos`;
 /*!40000 ALTER TABLE `criterios_avaliativos` DISABLE KEYS */;
 INSERT INTO `criterios_avaliativos` (`idcriterios_avaliativos`, `criterio`) VALUES
 	(1, '<p>\n	1. Pontualidade: &eacute; pontual e cumpre os hor&aacute;rios das aulas, reuni&otilde;es e atividades programadas pelo seu setor</p>\n'),
@@ -277,7 +268,6 @@ CREATE TABLE IF NOT EXISTS `curso` (
 ) ENGINE=InnoDB AUTO_INCREMENT=103 DEFAULT CHARSET=utf8;
 
 -- Copiando dados para a tabela db_cppd.curso: ~43 rows (aproximadamente)
-DELETE FROM `curso`;
 /*!40000 ALTER TABLE `curso` DISABLE KEYS */;
 INSERT INTO `curso` (`idcurso`, `nome`, `tipo`) VALUES
 	(1, 'TECNOLOGIA EM GESTÃO AMBIENTAL', 'FIC'),
@@ -340,7 +330,6 @@ CREATE TABLE IF NOT EXISTS `fichas_grupo` (
 ) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8;
 
 -- Copiando dados para a tabela db_cppd.fichas_grupo: ~16 rows (aproximadamente)
-DELETE FROM `fichas_grupo`;
 /*!40000 ALTER TABLE `fichas_grupo` DISABLE KEYS */;
 INSERT INTO `fichas_grupo` (`idfichas_grupo`, `grupo_idgrupo`, `ficha_avaliacao_idficha_avaliacao`, `ordem`, `pontos`) VALUES
 	(1, 1, 1, 1, 30),
@@ -370,7 +359,6 @@ CREATE TABLE IF NOT EXISTS `ficha_avaliacao` (
 ) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
 
 -- Copiando dados para a tabela db_cppd.ficha_avaliacao: ~8 rows (aproximadamente)
-DELETE FROM `ficha_avaliacao`;
 /*!40000 ALTER TABLE `ficha_avaliacao` DISABLE KEYS */;
 INSERT INTO `ficha_avaliacao` (`idficha_avaliacao`, `nome`, `tipo`) VALUES
 	(1, 'Ficha de Autoavaliação para Docentes', 'Critério'),
@@ -396,7 +384,6 @@ CREATE TABLE IF NOT EXISTS `ficha_criterios` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- Copiando dados para a tabela db_cppd.ficha_criterios: ~50 rows (aproximadamente)
-DELETE FROM `ficha_criterios`;
 /*!40000 ALTER TABLE `ficha_criterios` DISABLE KEYS */;
 INSERT INTO `ficha_criterios` (`ficha_avaliacao_idficha_avaliacao`, `criterios_avaliativos_idcriterios_avaliativos`, `ordem`) VALUES
 	(1, 1, 0),
@@ -460,7 +447,6 @@ CREATE TABLE IF NOT EXISTS `grupo` (
 ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 
 -- Copiando dados para a tabela db_cppd.grupo: ~5 rows (aproximadamente)
-DELETE FROM `grupo`;
 /*!40000 ALTER TABLE `grupo` DISABLE KEYS */;
 INSERT INTO `grupo` (`idgrupo`, `nome`, `descricao`) VALUES
 	(1, 'Grupo I', 'Docentes exclusivamente em atividades de ensino, pesquisa e extensão.'),
@@ -480,7 +466,6 @@ CREATE TABLE IF NOT EXISTS `menu` (
 ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 
 -- Copiando dados para a tabela db_cppd.menu: ~3 rows (aproximadamente)
-DELETE FROM `menu`;
 /*!40000 ALTER TABLE `menu` DISABLE KEYS */;
 INSERT INTO `menu` (`idmenu`, `categoria`, `icone`, `ordem`) VALUES
 	(3, 'Administração', 'fa fa-cog', 2),
@@ -499,7 +484,6 @@ CREATE TABLE IF NOT EXISTS `nivel` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- Copiando dados para a tabela db_cppd.nivel: ~0 rows (aproximadamente)
-DELETE FROM `nivel`;
 /*!40000 ALTER TABLE `nivel` DISABLE KEYS */;
 /*!40000 ALTER TABLE `nivel` ENABLE KEYS */;
 
@@ -509,15 +493,16 @@ CREATE TABLE IF NOT EXISTS `papel` (
   `papel` varchar(45) DEFAULT NULL,
   `is_admin` tinyint(1) DEFAULT NULL,
   PRIMARY KEY (`idpapel`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
 
 -- Copiando dados para a tabela db_cppd.papel: ~3 rows (aproximadamente)
-DELETE FROM `papel`;
 /*!40000 ALTER TABLE `papel` DISABLE KEYS */;
 INSERT INTO `papel` (`idpapel`, `papel`, `is_admin`) VALUES
 	(1, 'Administrador', 1),
-	(4, 'Administrador Local', 0),
-	(6, 'RH', 0);
+	(6, 'RH', 0),
+	(7, 'CPPD', 0),
+	(8, 'Docente', 0),
+	(9, 'Chefe Imediato', 0);
 /*!40000 ALTER TABLE `papel` ENABLE KEYS */;
 
 -- Copiando estrutura para tabela db_cppd.papel_usuario
@@ -532,11 +517,11 @@ CREATE TABLE IF NOT EXISTS `papel_usuario` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- Copiando dados para a tabela db_cppd.papel_usuario: ~2 rows (aproximadamente)
-DELETE FROM `papel_usuario`;
 /*!40000 ALTER TABLE `papel_usuario` DISABLE KEYS */;
 INSERT INTO `papel_usuario` (`papel_idpapel`, `usuario_idusuario`) VALUES
 	(1, 10),
-	(6, 11);
+	(6, 11),
+	(8, 12);
 /*!40000 ALTER TABLE `papel_usuario` ENABLE KEYS */;
 
 -- Copiando estrutura para tabela db_cppd.privilegio
@@ -551,13 +536,17 @@ CREATE TABLE IF NOT EXISTS `privilegio` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- Copiando dados para a tabela db_cppd.privilegio: ~4 rows (aproximadamente)
-DELETE FROM `privilegio`;
 /*!40000 ALTER TABLE `privilegio` DISABLE KEYS */;
 INSERT INTO `privilegio` (`papel_idpapel`, `controller_idcontroller`) VALUES
-	(4, 16),
-	(4, 21),
-	(4, 26),
-	(6, 14);
+	(6, 14),
+	(6, 34),
+	(6, 40),
+	(7, 14),
+	(7, 39),
+	(8, 14),
+	(8, 15),
+	(8, 16),
+	(8, 34);
 /*!40000 ALTER TABLE `privilegio` ENABLE KEYS */;
 
 -- Copiando estrutura para tabela db_cppd.segmento
@@ -568,7 +557,6 @@ CREATE TABLE IF NOT EXISTS `segmento` (
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 
 -- Copiando dados para a tabela db_cppd.segmento: ~4 rows (aproximadamente)
-DELETE FROM `segmento`;
 /*!40000 ALTER TABLE `segmento` DISABLE KEYS */;
 INSERT INTO `segmento` (`idsegmento`, `nome`) VALUES
 	(1, 'Docente'),
@@ -600,7 +588,6 @@ CREATE TABLE IF NOT EXISTS `servidor` (
 ) ENGINE=InnoDB AUTO_INCREMENT=1759 DEFAULT CHARSET=utf8;
 
 -- Copiando dados para a tabela db_cppd.servidor: ~1.344 rows (aproximadamente)
-DELETE FROM `servidor`;
 /*!40000 ALTER TABLE `servidor` DISABLE KEYS */;
 INSERT INTO `servidor` (`idservidor`, `campi_idcampi`, `segmento_idsegmento`, `matricula`, `nome`, `email`, `telefone`, `foto`, `ativo`, `data_ingresso`, `grupo_idgrupo`) VALUES
 	(1, 1, 1, '1283418', 'Ademir Jose Pereira', 'ademir.pereira@ifsuldeminas.edu.br', NULL, '', 'Sim', NULL, NULL),
@@ -1962,7 +1949,6 @@ CREATE TABLE IF NOT EXISTS `servidor_titulacao` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- Copiando dados para a tabela db_cppd.servidor_titulacao: ~0 rows (aproximadamente)
-DELETE FROM `servidor_titulacao`;
 /*!40000 ALTER TABLE `servidor_titulacao` DISABLE KEYS */;
 /*!40000 ALTER TABLE `servidor_titulacao` ENABLE KEYS */;
 
@@ -1975,7 +1961,6 @@ CREATE TABLE IF NOT EXISTS `titulacao` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- Copiando dados para a tabela db_cppd.titulacao: ~0 rows (aproximadamente)
-DELETE FROM `titulacao`;
 /*!40000 ALTER TABLE `titulacao` DISABLE KEYS */;
 /*!40000 ALTER TABLE `titulacao` ENABLE KEYS */;
 
@@ -1985,18 +1970,18 @@ CREATE TABLE IF NOT EXISTS `usuario` (
   `servidor_idservidor` int(11) NOT NULL,
   `senha` varchar(50) DEFAULT NULL,
   `nivel` enum('Particular','Campus','Geral') DEFAULT NULL,
-  `autoriza_uso` tinyint(4) DEFAULT '0',
+  `autoriza_uso` tinyint(4) DEFAULT 0,
   PRIMARY KEY (`idusuario`),
   KEY `fk_usuario_servidor1_idx` (`servidor_idservidor`),
   CONSTRAINT `fk_usuario_servidor1` FOREIGN KEY (`servidor_idservidor`) REFERENCES `servidor` (`idservidor`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=latin1;
 
 -- Copiando dados para a tabela db_cppd.usuario: ~2 rows (aproximadamente)
-DELETE FROM `usuario`;
 /*!40000 ALTER TABLE `usuario` DISABLE KEYS */;
 INSERT INTO `usuario` (`idusuario`, `servidor_idservidor`, `senha`, `nivel`, `autoriza_uso`) VALUES
-	(10, 51, 'e99a18c428cb38d5f260853678922e03', 'Geral', 1),
-	(11, 86, 'e10adc3949ba59abbe56e057f20f883e', 'Campus', 0);
+	(10, 51, 'e10adc3949ba59abbe56e057f20f883e', 'Geral', 1),
+	(11, 86, 'e10adc3949ba59abbe56e057f20f883e', 'Campus', 0),
+	(12, 70, 'e10adc3949ba59abbe56e057f20f883e', 'Particular', 0);
 /*!40000 ALTER TABLE `usuario` ENABLE KEYS */;
 
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
