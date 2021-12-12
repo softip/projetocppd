@@ -26,7 +26,7 @@ class Controller extends CI_Controller {
         if ($state == "insert_validation") {
             $crud->set_rules('name', 'Nome', 'required|is_unique[controller.name]');
         }
-        $crud->unset_clone();
+        //$crud->unset_clone();
         $form = $crud->render();
         $this->template->set("breadcrumb1", "Cadastros");
         $this->template->set("breadcrumb2", "Recursos");

@@ -9,10 +9,13 @@ ok => 1 - Importar dados dos servidores para o Sistema
 ok => 2 - Corrigir o login para fazer login com contas institucionais
 ok => 3 - Criar sistema de permissões e nível de acesso para os usuários
 4 - Definir os menus (funcionalidades que cada servidor/papel possui)
-5 - Para Docente - Criar tela de requerimento 
-6 - Para RH - Criar tela para registrar processo
+5 - Para Docente - Criar tela de requerimento e tabela de requerimento
+6 - Para RH - Criar tela para registrar processo, listar requerimentos e criar processo
 7 - Para docente - criar tela para realizar a avaliação e fazer o upload dos arquivos, conforme grupo e fichas de avaliação
 8 - Cria script no cron para enviar email de notificação para os docentes
 9 - Importar a planilha com as dadas das próximas avaliações
 10 - Criar tela para CPPD confirmar a documentação/fichas enviadas
 11 - Criar tela para RH confimar a progressão e definir a data da próxima avaliação
+12 - Criar um treeview para selecionar no cadastro de servidor o setor que ele está lotado: https://www.jstree.com/docs/json/
+13 - Verificar a possibilidade de excluir a tabela campi em favor da tabela setor
+14 - Cron par enviar email https://packagist.org/packages/cron/cron

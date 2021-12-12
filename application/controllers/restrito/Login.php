@@ -10,8 +10,7 @@ class Login extends CI_Controller {
         parent::__construct();
         $this->client = new Google_Client();
         $this->client->setClientId('188279924105-e5qtf8nfo9r95h20d5vbpg3dibeokjef.apps.googleusercontent.com');
-        $this->client->setClientSecret('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');
-        //$this->client->setRedirectUri('http://localhost/catalogo/index.php/restrito/login/google');
+        $this->client->setClientSecret('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');        
         $this->client->setRedirectUri(site_url('/restrito/login/google'));
         $this->client->setScopes(["email", Google_Service_PeopleService::USERINFO_PROFILE]);
     }
@@ -64,7 +63,7 @@ class Login extends CI_Controller {
         $pathPoto = "assets/uploads/user/u_$servidor->idservidor.jpg";
         copy($picture, $pathPoto);        
         $this->db->where("idservidor", $servidor->idservidor);
-        $this->db->update("servidor", array('foto' => $pathPoto));
+        $this->db->update("servidor", array('foto' => "u_$servidor->idservidor.jpg"));
     }
 
     private function _createUser($servidor) {        

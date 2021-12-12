@@ -23,10 +23,12 @@ if (!empty($list)) {
             </tr>
         </thead>		
         <tbody>
-            <?php foreach ($list as $num_row => $row) { ?>        
+            
+            <?php 
+            foreach ($list as $num_row => $row) { ?>        
                 <tr>
                     <?php foreach ($columns as $column) { ?>
-                        <td width='<?php echo $column_width ?>%' class='<?php if (isset($order_by[0]) && $column->field_name == $order_by[0]) { ?>sorted<?php } ?>'>
+                        <td width='<?php echo $column_width ?>%' >
                             <div class='text-left'><?php echo $row->{$column->field_name} != '' ? $row->{$column->field_name} : '&nbsp;'; ?></div>
                         </td>
                     <?php } ?>
@@ -51,8 +53,12 @@ if (!empty($list)) {
                                 if (!empty($row->action_urls)) {
                                     foreach ($row->action_urls as $action_unique_id => $action_url) {
                                         $action = $actions[$action_unique_id];
+                                        //$attributes = implode( ' ', array_filter( array_map( function ( $key, $value ) {
+                                        //    return $value ? $key . '="' . htmlspecialchars( $value ) . '"' : false;
+                                        //}, array_keys( $action->atributtes ), $action->atributtes ) ) );
                                         ?>
-                                        <a href="<?php echo $action_url; ?>" class="<?php echo $action->css_class; ?> crud-action" title="<?php echo $action->label ?>"><?php
+
+                                        <a href="<?php echo $action_url; ?>" class="<?php echo $action->css_class; ?> crud-action" title="<?php echo $action->label ?>" <?php echo $action->atributtes ?>><?php
                                             if (!empty($action->image_url)) {
                                                 ?><img src="<?php echo $action->image_url; ?>" alt="<?php echo $action->label ?>" /><?php
                                             }

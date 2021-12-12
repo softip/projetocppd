@@ -4,22 +4,23 @@ class Servidor extends CI_Controller{
         
     public function __construct() {
         parent::__construct();
-        $usuario = $this->session->userdata("user");
-        if (!isset($usuario)){
-            redirect(site_url('restrito/login'));
-        }
     }
-
     
     public function index(){
         $crud = new Grocery_CRUD();
         $crud->set_table("servidor");
-        $crud->columns("nome", "campi_idcampi", "email", "foto", "ativo");
-        $crud->set_relation("campi_idcampi", "campi", "nome");
-        $crud->set_relation("segmento_idsegmento", "segmento", "nome");        
-        $crud->display_as("campi_idcampi", "Campi");        
-        $crud->display_as("segmento_idsegmento", "Segmento");     
+        $crud->columns("nome", "setor_idsetor", "email", "foto");
+        //verificar setor ou campi
+        //$crud->set_relation("campi_idcampi", "campi", "nome");
+        $crud->set_relation("segmento_idsegmento", "segmento", "nome"); 
+        $crud->set_relation("setor_idsetor", "setor", "nome");
+        $crud->set_relation("grupo_idgrupo", "grupo", "descricao");              
+        $crud->display_as("campi_idcampi", "Campi");  
+        $crud->display_as("setor_idsetor", "Lotação");      
+        $crud->display_as("segmento_idsegmento", "Segmento"); 
+        $crud->display_as("grupo_idgrupo", "Grupo");    
         $crud->set_field_upload("foto", "assets/uploads/user");
+        $crud->add_action("Carreira",null,site_url('restrito/rh/carreira/index/'), "fas fa-chart-line",null,null);
         
         $state = $crud->getState();
         if ($state == "insert_validation") {

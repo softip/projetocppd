@@ -14,6 +14,7 @@ class Nivel extends CI_Controller {
     public function index() {
         $crud = new Grocery_CRUD();
         $crud->set_table("nivel");
+        $crud->required_fields("classe_idclasse", "nivel");
         $crud->display_as("classe_idclasse", "Classe");
         $crud->set_relation("classe_idclasse", "classe", "classe");
         $form = $crud->render();

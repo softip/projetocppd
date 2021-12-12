@@ -89,9 +89,11 @@ class grocery_CRUD_Field_Types
 			switch ($real_type) {
 				case 'text':
 					if(!empty($this->unset_texteditor) && in_array($field_info->name,$this->unset_texteditor))
-						$field_info->extras = false;
-					else
+						$field_info->extras = false;						
+					else{
+						$field_info->default_value = (isset($field_info->extras)) ? $field_info->extras : null;
 						$field_info->extras = 'text_editor';
+					}
 				break;
 
 				case 'relation':
@@ -196,7 +198,6 @@ class grocery_CRUD_Field_Types
 			}
 
 		$this->field_types = $types;
-
 		return $this->field_types;
 	}
 
@@ -2362,6 +2363,7 @@ class grocery_CRUD_Layout extends grocery_CRUD_Model_Driver
 
 	protected function get_text_input($field_info,$value)
 	{
+		
 		if($field_info->extras == 'text_editor')
 		{
 			$editor = $this->config->default_text_editor;
@@ -2388,11 +2390,11 @@ class grocery_CRUD_Layout extends grocery_CRUD_Model_Driver
 
 			$class_name = $this->config->text_editor_type == 'minimal' ? 'mini-texteditor' : 'texteditor';
 
-			$input = "<textarea id='field-{$field_info->name}' name='{$field_info->name}' class='$class_name' >$value</textarea>";
+			$input = "<textarea id='field-{$field_info->name}' name='{$field_info->name}' class='$class_name' >".( (empty($value) && !empty($field_info->default_value)) ? $field_info->default_value : $value)."</textarea>";
 		}
 		else
 		{
-			$input = "<textarea id='field-{$field_info->name}' name='{$field_info->name}' class='form-control'>$value</textarea>";
+			$input = "<textarea id='field-{$field_info->name}' name='{$field_info->name}' class='form-control'>".( (empty($value) && !empty($field_info->default_value)) ? $field_info->default_value : $value)."</textarea>";
 		}
 		return $input;
 	}
@@ -2443,6 +2445,7 @@ class grocery_CRUD_Layout extends grocery_CRUD_Model_Driver
 
 	protected function get_hidden_input($field_info,$value)
 	{
+		
 		if($field_info->extras !== null && $field_info->extras != false)
 			$value = $field_info->extras;
 		$input = "<input id='field-{$field_info->name}' type='hidden' name='{$field_info->name}' value='$value' />";
@@ -3776,7 +3779,7 @@ class Grocery_CRUD extends grocery_CRUD_States
 	 * @param array|string $extras
 	 */
 	public function field_type($field , $type, $extras = null)
-	{
+	{		
 		return $this->change_field_type($field , $type, $extras);
 	}
 
@@ -5369,7 +5372,7 @@ class Grocery_CRUD extends grocery_CRUD_States
 			'css_class' 	=> $css_class,
 			'url_callback' 	=> $url_callback,
 			'url_has_http'	=> substr($link_url,0,7) == 'http://' || substr($link_url,0,8) == 'https://' ? true : false,
-                        'atributtes' => $atributtes   //ivan
+            'atributtes' => $atributtes   //ivan
 		);
 
 		return $this;

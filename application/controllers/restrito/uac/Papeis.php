@@ -9,7 +9,7 @@ class Papeis extends CI_Controller {
         $this->crud->set_table('papel');
         $this->crud->set_subject("Papel");        
         $this->crud->columns('papel', 'is_admin', 'permitir_acesso');
-        $this->crud->set_relation_n_n("permitir_acesso", "privilegio", "controller", "papel_idpapel", "controller_idcontroller", "descricao");
+        $this->crud->set_relation_n_n("permitir_acesso", "privilegio", "controller", "papel_idpapel", "controller_idcontroller", "{titulo}-{descricao}");
         $state = $this->crud->getState();
         if ($state == "insert_validation") {
             $this->crud->set_rules('papel', 'Papel', 'required|is_unique[papel.papel]');

@@ -38,24 +38,28 @@ class Menus {
         $menus = $this->CI->db->get("menu")->result();
         $categoriaAtiva = $this->_getCategoriaAtiva();
         foreach ($menus as $menu) {
+            $submenus = "";
+            $menu_ativo = '';
+            $this->CI->db->where("menu_idmenu", $menu->idmenu);
+            $this->CI->db->where("mostrar_menu", 1);
+            $links = $this->CI->db->get("controller")->result();
+            foreach ($links as $link) {
+                $linkAtivo = $this->hasActiveLink($link->name); 
+                $menu_ativo = $linkAtivo ? 'active' : $menu_ativo; 
+                $submenus .= sprintf("<li class='nav-item' ><a href='" . site_url($link->name) . "' class='nav-link $linkAtivo' ><i class='$link->icone nav-icon'></i> <p>$link->titulo</p></a></li>\n");
+            }
+
             $openMenu = ($categoriaAtiva == $menu->categoria) ? "menu-open" : "";
             $openMenu2 = ($categoriaAtiva == $menu->categoria) ? "style='display: block;'" : "";
             printf("<li class='nav-item has-treeview $openMenu'>\n");
-            printf("<a href='#' class='nav-link'>");
+            printf("<a href='#' class='nav-link $menu_ativo'>");
             printf( "<i class='nav-icon $menu->icone'></i>\n");
             printf( "      <p>$menu->categoria");
             printf( "        <i class='right fas fa-angle-left'></i>\n");
             printf( "      </p>\n");
             printf( "    </a>\n");
             printf( "    <ul class='nav nav-treeview' $openMenu2> \n");
-
-            $this->CI->db->where("menu_idmenu", $menu->idmenu);
-            $this->CI->db->where("mostrar_menu", 1);
-            $links = $this->CI->db->get("controller")->result();
-            foreach ($links as $link) {
-                $linkAtivo = $this->hasActiveLink($link->name); 
-                echo "<li nav-item $linkAtivo><a href='" . site_url($link->name) . "' class='nav-link' ><i class='$link->icone nav-icon'></i> <p>$link->titulo</p></a></li>";
-            }
+            echo $submenus ;
             echo "    </ul>";
             echo "  </li>";
         }
@@ -71,15 +75,18 @@ class Menus {
         foreach ($menus as $menu) {
             $openMenu = ($categoriaAtiva == $menu->categoria) ? "menu-open" : "";
             $openMenu2 = ($categoriaAtiva == $menu->categoria) ? "style='display: block;'" : "";
+            
+            $links = $this->_addItensMenu($papeis, $menu->idmenu);
+            
             printf("<li class='nav-item has-treeview $openMenu'>\n");
-            printf("<a href='#' class='nav-link'>");
+            printf("<a href='#' class='nav-link %s'>\n", $links[0]);
             printf( "<i class='nav-icon $menu->icone'></i>\n");
             printf( "      <p>$menu->categoria");
             printf( "        <i class='right fas fa-angle-left'></i>\n");
             printf( "      </p>\n");
             printf( "    </a>\n");
-            printf( "    <ul class='nav nav-treeview' $openMenu2> \n");           
-            $this->_addItensMenu($papeis, $menu->idmenu);
+            printf( "    <ul class='nav nav-treeview' $openMenu2> \n");                       
+            echo $links[1];
             echo "    </ul>";
             echo "  </li>";
         }
@@ -87,6 +94,8 @@ class Menus {
     }
 
     private function _addItensMenu($papeis, $idmenu) {
+        $str_links = "";
+        $menu_ativo = '';
         $this->CI->db->select("controller.name, controller.icone, controller.titulo");
         $this->CI->db->join("privilegio", "privilegio.controller_idcontroller = controller.idcontroller");
         $this->CI->db->distinct();
@@ -96,8 +105,10 @@ class Menus {
         $links = $this->CI->db->get("controller")->result();
         foreach ($links as $link) {
             $linkAtivo = $this->hasActiveLink($link->name); 
-            echo "<li nav-item $linkAtivo><a href='" . site_url($link->name) . "' class='nav-link' ><i class='$link->icone nav-icon'></i> <p>$link->titulo</p></a></li>";
+            $menu_ativo = $linkAtivo ? 'active' : $menu_ativo;
+            $str_links .= "<li class='nav-item'><a href='" . site_url($link->name) . "' class='nav-link $linkAtivo' ><i class='$link->icone nav-icon'></i> <p>$link->titulo</p></a></li>";
         }
+        return array($menu_ativo, $str_links);
         
     }
 
@@ -117,7 +128,7 @@ class Menus {
         $nameControllerUrl = end($urls);
         $controlador = $this->CI->router->class;
         if ($nameControllerUrl == $controlador) {
-            return "class='active'";
+            return "active";
         }
         return "";
     }
@@ -126,7 +137,8 @@ class Menus {
         $categoria = array(
             "administracao" => "Administração", 
             "avaliacao" => "Avaliação", 
-            "uac" => "Usuário e Permissão"
+            "uac" => "Usuário e Permissão",
+            "rh" => "Gestão de Pessoas"
             );
         $segmentos = $this->CI->uri->segments;
         $controlador = $this->CI->router->class;
