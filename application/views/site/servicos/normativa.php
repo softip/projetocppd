@@ -6,8 +6,6 @@
     <div id="list-example" class="list-group">
       <a class="list-group-item list-group-item-action" href="#list-item-1">Informações</a>
       <a class="list-group-item list-group-item-action" href="#list-item-2">Documentação</a>
-      <a class="list-group-item list-group-item-action" href="#list-item-3">Item 3</a>
-      <a class="list-group-item list-group-item-action" href="#list-item-4">Item 4</a>
     </div>
   </div>
 
@@ -27,10 +25,7 @@
       <h4><a class="nav-link" href="<?= base_url() ?>recursos/documentos/res_119_2016_Normativa_Docente.pdf" target="_blank">Resolução nº 119/2016, de 15 de dezembro de 2016.</a></h4>
       
       
-      <h4 id="list-item-3">Item 3</h4>
-      <p>...</p>
-      <h4 id="list-item-4">Item 4</h4>
-      <p>...</p>
+      
     </div>
   </div>
 </div>

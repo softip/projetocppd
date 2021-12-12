@@ -5,8 +5,6 @@
     <div id="list-example" class="list-group">
       <a class="list-group-item list-group-item-action" href="#list-item-1">Informações</a>
       <a class="list-group-item list-group-item-action" href="#list-item-2">Documentação</a>
-      <a class="list-group-item list-group-item-action" href="#list-item-3">Item 3</a>
-      <a class="list-group-item list-group-item-action" href="#list-item-4">Item 4</a>
     </div>
   </div>
 
@@ -78,10 +76,7 @@
         <h4><a class="nav-link" href="<?= base_url() ?>recursos/documentos/Lei_12.772.pdf" target="_blank">Lei no 12.772, de 28 de dezembro de 2012.</a></h4>
         <h4><a class="nav-link" href="<?= base_url() ?>recursos/documentos/Reg_60_2019_CPPD.pdf" target="_blank">Resolução no 060/2019, de 29 de agosto de 2019.</a></h4>
       
-        <h4 id="list-item-3">Item 3</h4>
-      <p>...</p>
-      <h4 id="list-item-4">Item 4</h4>
-      <p>...</p>
+        
     </div>
   </div>
 </div>
