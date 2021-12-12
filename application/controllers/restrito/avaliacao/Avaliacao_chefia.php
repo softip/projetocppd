@@ -40,7 +40,10 @@ class Avaliacao_chefia extends CI_Controller {
             $this->crud->field_type("status", "readonly");
             $this->crud->set_field_upload("avaliacao_chefia");
             $this->crud->fields("numero_processo", "data_abertura", "status","avaliacao_chefia");                       
-         }               
+         }  
+         $this->crud->set_field_upload("avaliacao_chefia");          
+        $this->crud->set_field_upload("avaliacao_docente"); 
+        $this->crud->set_field_upload("avaliacao_discente");              
         $form = $this->crud->render();
         $this->template->load("template/restrito", 'crud/index', $form);
     }
